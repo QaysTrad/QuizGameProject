@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+var btnRD = $(".ready")
+
+btnRD.on("click",function () {
+	localStorage.setItem("lastname", $(".nickName").val())
+})
+
+
+=======
 
 
 subject={};
@@ -29,3 +38,4 @@ subject.random={
   fakeAnswer2:[],
   fakeAnswer3:[]
 };
+>>>>>>> 2caffa7c0fd9a2e9ae179f444c85e9ab2c34a901
