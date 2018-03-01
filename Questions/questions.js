@@ -3,7 +3,7 @@ var first= $("<h2>HI ! </h2> <br>");
 var cont =$("<h2>Are You Think You Good Enough With </h2>")
 var btnNext = $("<button></button")
 var name = localStorage.getItem("lastname")
-var radio = localStorage.getItem("Radio") 
+var radio = localStorage.getItem("Radio1") 
 
 btnNext.append("<i class='fa fa-angle-right'></i>")
 btnNext.css("font-size","30px")
@@ -72,13 +72,120 @@ for (var i = 0; i < obj.questions.length; i++) {
 	return arr;
 }
 
-
-
-console.log(radio , subject[radio])
+var nnn = $('<button class="btn btn-default nee">Next</button>')
+$("body").append(nnn)
 var next = $("<button></button>")
 next.addClass("btn btn-default nee")
 next.text("Next")
 
+
+// 	var nextDiv = $("<div></div>")
+// nextDiv.addClass("input-group")
+// nextDiv.append(next)
+
+
+// var trueAns1 = $("<p></p>")
+// trueAns1.text(getData(subject[radio])[0][1])
+
+// var falseAns1 = $("<p></p>")
+// falseAns1.text("first")
+
+// var falseAns2 = $("<p></p>")
+// falseAns2.text("first")
+
+
+// var input1 = $("<input>")
+// input1.attr("checked" , "true" )
+// input1.attr("Value" , "first")
+// input1.attr("type","radio")
+// input1.attr("name","optradio")
+// input1.addClass("ree")
+
+
+
+// var input2 = $("<input>")
+// input2.attr( "Value" , "2" )
+// input2.attr("type","radio")
+// input2.attr("name","optradio")
+// input2.addClass("ree")
+
+// var input3 = $("<input>")
+// input3.attr("Value" , "3")
+// input3.attr("type","radio")
+// input3.attr("name","optradio")
+// input3.addClass("ree")
+
+
+// var label1 =$("<label></label")
+// label1.append(input1).append(trueAns1)
+
+
+// var label2 =$("<label></label")
+// label2.append(input2).append(falseAns1)
+
+// var label3 =$("<label></label")
+// label3.append(input3).append(falseAns2)
+
+
+
+
+// var radDiv = $("<div></div>")
+// radDiv.addClass("radio")
+// radDiv.append(label1).append(label2).append(label3)
+
+// var theChoise = $("<div></div>")
+// theChoise.addClass("theRadio")
+
+// theChoise.append(radDiv)
+
+// theQuestion = $("<h1></h1>")
+// theQuestion.text()
+
+// theQuestionDiv = $("<div></div>")
+// theQuestionDiv.append(theQuestion)
+
+// var finDiv1 =$("<div></div>")
+// finDiv1.addClass("col-md-12")
+// finDiv1.attr("align" ,"center")
+// finDiv1.append(theQuestionDiv).append(theChoise).append(nextDiv)
+
+// var finDiv2 = $("<div></div>")
+// finDiv2.addClass("container-fluid text-center ")
+// finDiv2.append(finDiv1)
+
+// $("final").append(finDiv2)
+
+// $("body").append(finDiv2)
+
+
+
+
+
+
+
+/********Button******/
+var cout = 0 ;
+var len = getData(subject[radio])[cout].length
+console.log(len)
+console.log(cout)
+if(cout > len)
+{
+	$(".final").hide()
+}
+
+nnn.on("click",function () {
+
+console.log(len)
+console.log(cout)
+if(cout > len)
+{
+	$(".final").hide()
+}
+
+
+var next = $("<button></button>")
+next.addClass("btn btn-default nee")
+next.text("Next")
 
 	var nextDiv = $("<div></div>")
 nextDiv.addClass("input-group")
@@ -86,13 +193,13 @@ nextDiv.append(next)
 
 
 var trueAns1 = $("<p></p>")
-trueAns1.text(getData(subject[radio])[0][1])
+trueAns1.text(getData(subject[radio])[cout][1])
 
 var falseAns1 = $("<p></p>")
-falseAns1.text("first")
+falseAns1.text(getData(subject[radio])[cout][2])
 
 var falseAns2 = $("<p></p>")
-falseAns2.text("first")
+falseAns2.text(getData(subject[radio])[cout][3])
 
 
 var input1 = $("<input>")
@@ -128,88 +235,6 @@ var label3 =$("<label></label")
 label3.append(input3).append(falseAns2)
 
 
-
-
-var radDiv = $("<div></div>")
-radDiv.addClass("radio")
-radDiv.append(label1).append(label2).append(label3)
-
-var theChoise = $("<div></div>")
-theChoise.addClass("theRadio")
-
-theChoise.append(radDiv)
-
-theQuestion = $("<h1></h1>")
-theQuestion.text()
-
-theQuestionDiv = $("<div></div>")
-theQuestionDiv.append(theQuestion)
-
-var finDiv1 =$("<div></div>")
-finDiv1.addClass("col-md-12")
-finDiv1.attr("align" ,"center")
-finDiv1.append(theQuestionDiv).append(theChoise).append(nextDiv)
-
-var finDiv2 = $("<div></div>")
-finDiv2.addClass("container-fluid text-center ")
-finDiv2.append(finDiv1)
-
-$("final").append(finDiv2)
-
-$("body").append(finDiv2)
-var cout = 0
-next.on("click",function () {
-
-cout+=1
-
-
-var next = $("<button></button>")
-next.addClass("btn btn-default nee")
-next.text("Next")
-
-	var nextDiv = $("<div></div>")
-nextDiv.addClass("input-group")
-nextDiv.append(next)
-
-
-var theH1 = $("<p></p>")
-theH1.text("first")
-
-var input1 = $("<input>")
-input1.attr("checked" , "true" )
-input1.attr("Value" , "first")
-input1.attr("type","radio")
-input1.attr("name","optradio")
-input1.addClass("ree")
-
-input1.append(theH1)
-
-var input2 = $("<input>")
-input2.attr( "Value" , "2" )
-input2.attr("type","radio")
-input2.attr("name","optradio")
-input2.addClass("ree")
-
-var input3 = $("<input>")
-input3.attr("Value" , "3")
-input3.attr("type","radio")
-input3.attr("name","optradio")
-input3.addClass("ree")
-
-
-var label1 =$("<label></label")
-label1.append(input1)
-
-
-var label2 =$("<label></label")
-label2.append(input2)
-
-var label3 =$("<label></label")
-label3.append(input3)
-
-
-
-
 var radDiv = $("<div></div>")
 radDiv.addClass("radio")
 radDiv.append(label1).append(label2).append(label3)
@@ -229,13 +254,22 @@ var finDiv1 =$("<div></div>")
 finDiv1.addClass("col-md-12")
 finDiv1.attr("align" ,"center")
 finDiv1.append(theQuestionDiv).append(theChoise).append(nextDiv)
-
+var score = $("<h1></h1>")
 var finDiv2 = $("<div></div>")
 finDiv2.addClass("container-fluid text-center ")
 finDiv2.append(finDiv1)
 
-$("final").append(finDiv2)
+$(".final").append(finDiv2)
+$(".final").append(score)
+$("body").append($(".final"))
 
+cout+=1
+
+score.text(cout +"/" +len)
+
+next.on("click" , function () {
+	$(".container-fluid").hide()
+})
 
 })
 

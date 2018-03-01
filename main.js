@@ -14,18 +14,16 @@ var btnRD = $(".ready")
 btnRD.on("click",function () {
 	localStorage.setItem("lastname", $(".nickName").val())
 if ($("#games").is(":checked")) {
-	
-
+	localStorage.setItem("Radio1" ,$("#games").attr("value"))
+}
 
 if ($("#sports").is(":checked")) {
-	
-	
-if ($("#tv").is(":checked")) {
-			localStorage.setItem("Radio" ,$("#tv").attr("value"))
-		}
+	localStorage.setItem("Radio1" ,$("#sports").attr("value"))
 	}
+if ($("#tv").is(":checked")) {
+			localStorage.setItem("Radio1" ,$("#tv").attr("value"))
+	
 }
-	localStorage.setItem("Radio" ,$(".mss").attr("value"))
 	
 
 	window.location.href="Questions/questions.html";
