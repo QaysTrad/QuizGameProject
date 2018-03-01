@@ -1,8 +1,40 @@
+$(document).ready(function () {
+
+$(".allBK").hide()
+$(".theStart").on("click",function () {
+	$(".allBK").slideDown()
+	$(".theStart").hide()
+})
+
+
+		
+
 var btnRD = $(".ready")
 
 btnRD.on("click",function () {
 	localStorage.setItem("lastname", $(".nickName").val())
+if ($("#games").is(":checked")) {
+	
+
+
+if ($("#sports").is(":checked")) {
+	
+	
+if ($("#tv").is(":checked")) {
+			localStorage.setItem("Radio" ,$("#tv").attr("value"))
+		}
+	}
+}
+	localStorage.setItem("Radio" ,$(".mss").attr("value"))
+	
+
+	window.location.href="Questions/questions.html";
+
+
+})	
+
 })
+
 
 
 

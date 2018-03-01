@@ -1,13 +1,45 @@
 body{
 	background-color: #020205;
+	font-family: Monospace;
 }
-
+.theStart{
+	position: relative;
+	top: 400px;
+}
 .allBK{
-	color : white;
+	position: relative;
+	top: 50px;
+	color : #00ff00;
+
 }
 .theName{
+	position: relative;
+	top: auto;
+	width: 450px;
+	background-color: #333333;
+}
+
+.texto{
+
+	color: black;
 
 }
-.texto{
-	color: black;
+.theRad{
+	position: relative;
+	top: 20px;
+
+	
+}
+.bbb{
+	position: relative;
+	top: 15px;
+}
+
+.start{
+	font-size :50px;
+	background-color: #00ff00;
+}
+.mss{
+	position: relative;
+	left:  15px;
 }

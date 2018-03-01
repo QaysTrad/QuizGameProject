@@ -4,43 +4,49 @@
 	<title>Quiz Game</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script> 
 
 </head>
 <body>
+
+	<div align="center" class="theStart">
+		<button class="btn start">Start<i class="fa fa-caret-right"></i></button>
+	</div>
 	<div class="container-fluid text-center allBK">
-		<div class="colomn ">
-			<div class="col-md-12" align="center">
-			<div class="wall theName">
+		<div class="colomn " align="center">
+
+			<div class="well theName">
 				<h1>NickName</h1>
 				
-			</div>
-			<div class="input-group texto">
-				<input type="text" name="text" class="nickName">
-			</div>
 
-			<div>
-				What You are Good At !! :
-				<div class="radio">
-					<label><input class="mss" value="Games" type="radio" name="optradio" checked="true">Games</label>
+				<div class="input-group texto">
+					<input type="text" name="text" class="nickName input-lg">
 				</div>
-				<div class="radio">
-					<label><input class="mss" value="Sports" type="radio" name="optradio" checked="false">Sports</label>
+
+				<div class = "theRad">
+					<h2 class="pero">What You are Good At !! </h2>
+					<div class="radio">
+						<h3><label><input  id="game" class="mss" value="games" type="radio" name="optradio" >Games</label></h3>
+					</div>
+					<div class="radio">
+						<h3><label><input id="sports" class="mss" value="sports" type="radio" name="optradio" >Sports</label></h3>
+					</div>
+					<div class="radio ">
+						<h3><label><input id="tv" class="mss" value="tv" type="radio" name="optradio" >Movies/TV</label></h3>
+					</div>
 				</div>
-				<div class="radio ">
-					<label><input class="mss" value="Movies/TV" type="radio" name="optradio" checked="false">Movies/TV</label>
+				<div class="input-group bbb">
+					<button class="btn btn-default ready">ARE YOU READY !</button>
+
 				</div>
-			</div>
-			<div class="input-group">
-				<button class="btn btn-info ready">ARE YOU READY !</button>
 			</div>
 		</div>
-</div>
 	</div>
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script type="text/javascript" src = "main.js"></script>
 	<link rel="stylesheet" type="javascript" href="Questions/questions.js">
 	<link rel="stylesheet" type="text/css" href="style.css">
