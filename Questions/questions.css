@@ -1,10 +1,40 @@
 body{
-	/*background-color: #020205;*/
+	background-color: #020205;
 	font-family: Monospace;
+	color : #00ff00;
 }
 .allBk{
 	color : #00ff00;
 }
 .aaa{
 	background: white;
+}
+.nee{
+	position: relative;
+	top: auto;
+
+
+}
+.dis{
+	position: relative;	
+	left: 50px;	
+}
+.blink {
+	    animation: blink 0.8s steps(1, start) infinite alternate;
+}
+.granted {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 30px;
+}
+
+@keyframes blink {
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+.back{
+	position: relative;
+	top: 500px;
 }

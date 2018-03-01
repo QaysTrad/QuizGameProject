@@ -24,6 +24,10 @@ if ($("#tv").is(":checked")) {
 			localStorage.setItem("Radio1" ,$("#tv").attr("value"))
 	
 }
+if ($("#random").is(":checked")) {
+			localStorage.setItem("Radio1" ,$("#random").attr("value"))
+	
+}
 	
 
 	window.location.href="Questions/questions.html";

@@ -1,6 +1,6 @@
 var divv = $("<div> </div>")
-var first= $("<h2>HI ! </h2> <br>");
-var cont =$("<h2>Are You Think You Good Enough With </h2>")
+var first= $("<h2>Hi , </h2> <br>");
+var cont =$("<h2>Do you think you know enough about </h2>")
 var btnNext = $("<button></button")
 var name = localStorage.getItem("lastname")
 var radio = localStorage.getItem("Radio1") 
@@ -9,16 +9,11 @@ btnNext.append("<i class='fa fa-angle-right'></i>")
 btnNext.css("font-size","30px")
 divv.append(first).append(cont).append(btnNext)
 
-first.append(name)
-cont.append(radio)
+first.append(name + "!")
+cont.append(radio  )
 divv.addClass("firstext ")
 btnNext.addClass("btn btn-default")
 $(".allBk").append(divv)
-
-// $(".allBk").hide()
-btnNext.on("click",function () {
-	$(".allBk").fadeOut();
-})
 
 /************************/
 
@@ -32,7 +27,7 @@ subject.sports={
   fakeAnswer3:['Marquise James','Bulgaria','Farrell Thornton']
 };
 subject.games={
-  questions:['World of Warcraft:What is the name of the desert that surrounds the Caverns of Time?','World of Warcraft:What pit lord was the ruler of Outland before being imprisoned by Illidan Stormrage?','League of Legends: how many champions exist in the game?','Resident Evil 3: what was the name of the main character?','How big is the stack of items size in Minecraft?','Minecraft:Can you mine diamond with stone axe?','GTA:how many versions of the game has been released?','What is the main characters Name in Witcher 3?','Overwatch: what is the name of the Machine gun hero?','Where did the events of outlast happen?'],
+  questions:['World of Warcraft:What is the name of the desert that surrounds the Caverns of Time?','World of Warcraft:What pit lord was the ruler of Outland before being imprisoned by Illidan Stormrage?','League of Legends: how many champions exist in the game?','Resident Evil 3: what was the name of the main character?','How big is the stack of items size in Minecraft?','Minecraft:Can you mine diamond with stone axe?','GTA:how many games have they released?','What is the main characters Name in Witcher 3?','Overwatch: what is the name of the Machine gun hero?','Where did the events of outlast happen?'],
   answers:['Tanaris','Magtheradon',134,'Jill',64,'YES',15,'Gerlat','Bastion','A Hospital'],
   fakeAnswer1:['Silithus','Azgalor',65,'Lion',128,'No',7,'Ciri','Tracer','Prison'],
   fakeAnswer2:['Desolace','Kazzak',44,'Sam',32,'Maybe',4,'Triss','Reinhart','Playground'],
@@ -72,119 +67,33 @@ for (var i = 0; i < obj.questions.length; i++) {
 	return arr;
 }
 
-var nnn = $('<button class="btn btn-default nee">Next</button>')
-$("body").append(nnn)
+var nnn = $('<button class="btn btn-default nee" >Next</button>')
+
+$(".final").append(nnn)
 var next = $("<button></button>")
 next.addClass("btn btn-default nee")
 next.text("Next")
 
 
-// 	var nextDiv = $("<div></div>")
-// nextDiv.addClass("input-group")
-// nextDiv.append(next)
-
-
-// var trueAns1 = $("<p></p>")
-// trueAns1.text(getData(subject[radio])[0][1])
-
-// var falseAns1 = $("<p></p>")
-// falseAns1.text("first")
-
-// var falseAns2 = $("<p></p>")
-// falseAns2.text("first")
-
-
-// var input1 = $("<input>")
-// input1.attr("checked" , "true" )
-// input1.attr("Value" , "first")
-// input1.attr("type","radio")
-// input1.attr("name","optradio")
-// input1.addClass("ree")
-
-
-
-// var input2 = $("<input>")
-// input2.attr( "Value" , "2" )
-// input2.attr("type","radio")
-// input2.attr("name","optradio")
-// input2.addClass("ree")
-
-// var input3 = $("<input>")
-// input3.attr("Value" , "3")
-// input3.attr("type","radio")
-// input3.attr("name","optradio")
-// input3.addClass("ree")
-
-
-// var label1 =$("<label></label")
-// label1.append(input1).append(trueAns1)
-
-
-// var label2 =$("<label></label")
-// label2.append(input2).append(falseAns1)
-
-// var label3 =$("<label></label")
-// label3.append(input3).append(falseAns2)
-
-
-
-
-// var radDiv = $("<div></div>")
-// radDiv.addClass("radio")
-// radDiv.append(label1).append(label2).append(label3)
-
-// var theChoise = $("<div></div>")
-// theChoise.addClass("theRadio")
-
-// theChoise.append(radDiv)
-
-// theQuestion = $("<h1></h1>")
-// theQuestion.text()
-
-// theQuestionDiv = $("<div></div>")
-// theQuestionDiv.append(theQuestion)
-
-// var finDiv1 =$("<div></div>")
-// finDiv1.addClass("col-md-12")
-// finDiv1.attr("align" ,"center")
-// finDiv1.append(theQuestionDiv).append(theChoise).append(nextDiv)
-
-// var finDiv2 = $("<div></div>")
-// finDiv2.addClass("container-fluid text-center ")
-// finDiv2.append(finDiv1)
-
-// $("final").append(finDiv2)
-
-// $("body").append(finDiv2)
-
-
-
-
-
-
 
 /********Button******/
-var cout = 0 ;
+var cout = 1 ;
 var len = getData(subject[radio])[cout].length
-console.log(len)
-console.log(cout)
-if(cout > len)
+
+if(cout >= len)
 {
 	$(".final").hide()
 }
 
 nnn.on("click",function () {
 
-console.log(len)
-console.log(cout)
 if(cout > len)
-{
+{	$(".didIt").show()
 	$(".final").hide()
 }
 
 
-var next = $("<button></button>")
-next.addClass("btn btn-default nee")
+var next = $('<button class = "btn btn-default nee"></button>')
 next.text("Next")
 
 	var nextDiv = $("<div></div>")
@@ -192,15 +101,18 @@ nextDiv.addClass("input-group")
 nextDiv.append(next)
 
 
-var trueAns1 = $("<p></p>")
+var trueAns1 = $('<p class = "dis"></p>')
 trueAns1.text(getData(subject[radio])[cout][1])
 
-var falseAns1 = $("<p></p>")
+var falseAns1 = $('<p class = "dis"></p>')
 falseAns1.text(getData(subject[radio])[cout][2])
 
-var falseAns2 = $("<p></p>")
+var falseAns2 = $('<p class = "dis"></p>')
 falseAns2.text(getData(subject[radio])[cout][3])
 
+
+var falseAns3 = $('<p class = "dis"></p>')
+falseAns3.text(getData(subject[radio])[cout][4])
 
 var input1 = $("<input>")
 input1.attr("checked" , "true" )
@@ -217,27 +129,34 @@ input2.attr("type","radio")
 input2.attr("name","optradio")
 input2.addClass("ree")
 
-var input3 = $("<input>")
+var input3 = $('<input >')
 input3.attr("Value" , "3")
 input3.attr("type","radio")
 input3.attr("name","optradio")
 input3.addClass("ree")
 
+var input4 = $("<input>")
+input4.attr("Value" , "3")
+input4.attr("type","radio")
+input4.attr("name","optradio")
+input4.addClass("ree")
+
 
 var label1 =$("<label></label")
-label1.append(input1).append(trueAns1)
+label1.append(input1).append(trueAns1).append("<br>")
 
 
 var label2 =$("<label></label")
 label2.append(input2).append(falseAns1)
-
 var label3 =$("<label></label")
-label3.append(input3).append(falseAns2)
+label3.append(input3).append(falseAns2).append("<br>")
 
+var label4 =$("<label></label")
+label4.append(input4).append(falseAns3)
 
 var radDiv = $("<div></div>")
 radDiv.addClass("radio")
-radDiv.append(label1).append(label2).append(label3)
+radDiv.append(label1).append(label2).append(label3).append(label4)
 
 var theChoise = $("<div></div>")
 theChoise.addClass("theRadio")
@@ -260,12 +179,12 @@ finDiv2.addClass("container-fluid text-center ")
 finDiv2.append(finDiv1)
 
 $(".final").append(finDiv2)
-$(".final").append(score)
-$("body").append($(".final"))
+$(finDiv2).append(score)
+
 
 cout+=1
 
-score.text(cout +"/" +len)
+score.text(cout-1 +"/" +len)
 
 next.on("click" , function () {
 	$(".container-fluid").hide()
@@ -275,3 +194,16 @@ next.on("click" , function () {
 
 
 
+nnn.hide();
+// $(".allBk").hide()
+btnNext.on("click",function () {
+	nnn.show();
+	$(".allBk").fadeOut();
+})
+
+$(".back").on("click" , function () {
+	
+	window.location.href="C:/Users/Lenovo/Desktop/QuizGameProject/Home.html";
+})
+
+$(".didIt").hide()
